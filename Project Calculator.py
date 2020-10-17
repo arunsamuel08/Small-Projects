@@ -6,7 +6,7 @@ root.title("Calculator")
 # gave background color black
 root.configure(bg='#222')
 
-# made the gui window resizeable
+# to make the gui window not resizable
 root.resizable(False,False)
 
 # defined a global variable 'operator'
