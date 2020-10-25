@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import filedialog
 from pytube import YouTube
+from tkinter import messagebox
 
 Folder_Name = ""
 
@@ -41,6 +42,9 @@ def Download():
     # download function
     select.download(Folder_Name)
     label1_error.config(text="Download Completed", fg='green')
+    messagebox.showinfo('Download Completed', 'File Downloaded Successfully in\n'
+                           + Folder_Name)
+
 
 
 # making the gui window
@@ -103,6 +107,8 @@ browse_btn.grid(row=6, column=1)
 # error label for wrong path input
 browse_error = Label(root, text='Please choose folder', fg='red', font=('helvetica', 10))
 browse_error.grid(columnspan=7, pady=10)
+
+# ============================================= Progress Bar =========================================================
 
 # ========================================== Download Button ==========================================================
 
