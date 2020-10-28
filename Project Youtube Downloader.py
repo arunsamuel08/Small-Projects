@@ -44,13 +44,13 @@ def Download():
     label1_error.config(text="Download Completed", fg='green')
     messagebox.showinfo('Download Completed', 'File Downloaded Successfully in\n'
                            + Folder_Name)
-
+    
 
 
 # making the gui window
 root = Tk()
 # giving geometry
-root.geometry('370x500')
+root.geometry('370x475')
 # made the window not resizeable
 root.resizable(False, False)
 # gave window title
@@ -108,17 +108,11 @@ browse_btn.grid(row=6, column=1)
 browse_error = Label(root, text='Please choose folder', fg='red', font=('helvetica', 10))
 browse_error.grid(columnspan=7, pady=10)
 
-# ============================================= Progress Bar =========================================================
-
 # ========================================== Download Button ==========================================================
 
 # button for downloading
 download_btn = Button(root, text="Download", font=('helvetica', 16, 'bold'), fg='white', bg='red', command= Download)
 download_btn.place(x=125, y=400)
-
-
-
-
 
 
 root.mainloop()
